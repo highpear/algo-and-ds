@@ -17,7 +17,7 @@ void main(void)
     }
 }
 
-// ラグランジュの補間多項式より，tに対応する補間値sを求める関数
+// ラグランジュの補間多項式より，tに対応すcる補間値sを求める関数
 double lagrange(double *x, double *y, int n, double t) {  // 式(1)におけるxはt
 
     double s = 0.0, p;

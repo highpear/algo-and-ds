@@ -26,7 +26,7 @@ void main(void) {
 // 配列の全要素を表示する関数 
 void print_array(int array[], int n) {
 
-    for(int i=0; i<N; i++) {
+    for(int i=0; i<n; i++) {
         printf("%d ", array[i]);
     }
     printf("\n");

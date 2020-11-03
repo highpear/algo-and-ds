@@ -43,7 +43,7 @@ void insertion_sort(int array[], int n) {
         // <-- <-- j の走査方向 <-- <--
         for(int j=i-1; j>=0; j--) { // [i]より前の要素を1つずつ比較
             if(array[j] > array[j+1]) {
-                // 前の要素 < 後ろの要素 となるように交換
+                // 前の要素 < 後の要素 となるように交換
                 tmp = array[j];
                 array[j] = array[j+1];
                 array[j+1] = tmp;

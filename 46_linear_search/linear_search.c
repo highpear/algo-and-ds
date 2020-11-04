@@ -31,6 +31,6 @@ void main(void) {
     if(idx < N) {  // idxが一致したデータのindexとなっている
         printf("Name: %s Age: %d\n", a[idx].name, a[idx].age);
     } else {  // 見つからずに探索のループを終了した場合，idx = Nとなる
-        printf("Not found %d\n", idx);
+        printf("Not found\n");
     }
 }

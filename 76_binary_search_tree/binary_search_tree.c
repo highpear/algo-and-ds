@@ -2,22 +2,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct tel_node {
-    struct tel_node *left;  // 左部分木へのポインタ
-    char name[12];          // 名前
-    struct tel_node *right; // 右部分木へのポインタ
+struct name_node {
+    struct name_node *left;  // 左部分木へのポインタ
+    char name[12];           // 名前
+    struct name_node *right; // 右部分木へのポインタ
 };
 
-typedef struct tel_node TEL_NODE;
+typedef struct name_node NAME_NODE;
 
-TEL_NODE *search_min(TEL_NODE *root);
-TEL_NODE *search_max(TEL_NODE *root);
-TEL_NODE *talloc(void);
+NAME_NODE *search_min(NAME_NODE *root);
+NAME_NODE *search_max(NAME_NODE *root);
+NAME_NODE *talloc(void);
 
 void main(void) {
 
     char tmp[12];  // 名前の入力を待ち受ける
-    TEL_NODE *root, *p, *old;
+    NAME_NODE *root, *p, *old;
 
     printf("name ? >>");
 
@@ -57,9 +57,9 @@ void main(void) {
 }
 
 // 最小ノードを出力する関数 (左を辿る)
-TEL_NODE *search_min(TEL_NODE *root) {
+NAME_NODE *search_min(NAME_NODE *root) {
 
-    TEL_NODE *p = root;
+    NAME_NODE *p = root;
 
     while(p->left != NULL) {
         p = p->left;
@@ -69,9 +69,9 @@ TEL_NODE *search_min(TEL_NODE *root) {
 }
 
 // 最大ノードを出力する関数 (右を辿る)
-TEL_NODE *search_max(TEL_NODE *root) {
+NAME_NODE *search_max(NAME_NODE *root) {
 
-    TEL_NODE *p = root;
+    NAME_NODE *p = root;
 
     while(p->right != NULL) {
         p = p->right;
@@ -80,8 +80,8 @@ TEL_NODE *search_max(TEL_NODE *root) {
     return p;
 }
 
-// TEL_NODEのメモリ確保
-TEL_NODE *talloc(void) {
+// NAME_NODEのメモリ確保
+NAME_NODE *talloc(void) {
 
-    return (TEL_NODE *)malloc(sizeof(TEL_NODE));
+    return (NAME_NODE *)malloc(sizeof(NAME_NODE));
 }
